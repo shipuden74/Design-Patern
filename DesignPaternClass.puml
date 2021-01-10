@@ -1,0 +1,29 @@
+@startuml
+
+class CircuitDeCourse
+interface VoitureDuChampionnatDeFormuleUn {
+     + accelerer(): void
+     + freiner(): void
+     + tourner(): void
+     + getCarColor(): string
+}
+class Renault
+class Mercedes
+class Ferrari
+class VoitureConstructor {
+     # getVoitureDuChampionnatDeFormuleUn(VoitureType type): VoitureDuChampionnatDeFormuleUn
+}
+enum VoitureType
+
+class SafetyCar {
+    {static} - instance: SafetyCar
+    {static} + getInstance(): SafetyCar
+}
+VoitureDuChampionnatDeFormuleUn <|.. SafetyCar
+VoitureDuChampionnatDeFormuleUn <|.. Renault
+VoitureDuChampionnatDeFormuleUn <|.. Mercedes
+VoitureDuChampionnatDeFormuleUn <|.. Ferrari
+
+CircuitDeCourse ..> VoitureFactory : uses
+
+@enduml
