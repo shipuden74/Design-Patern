@@ -1,11 +1,15 @@
 public class Renault implements VoitureDuChampionnatDeFormuleUn{
+    @Override
     public void freiner(){
-        //code pour faire freiner la ferrari
     }
+    @Override
     public void tourner(){
-        //code pour faire tourner la ferrari
     }
+    @Override
     public void accelerer(){
-        //code pour faire accélerer la ferrari
+    }
+    @Override
+    public String getCarColor(){
+        return "bleu";
     }
 }
